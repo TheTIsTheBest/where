@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where ?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <div class="card">
+    <h1>Recherche de ville</h1>
+ 
+    <div class="field">
+      <label for="ville-input">Ville<span style="color:#A32D2D">*</span></label>
+      <input
+        id="ville-input"
+        type="text"
+        placeholder="Ex : Quimper…"
+        autocomplete="off"
+        aria-autocomplete="list"
+        aria-controls="suggestions"
+      />
+      <ul id="suggestions" role="listbox"></ul>
+      <span id="error-msg" class="error-msg">Veuillez choisir une ville dans la liste</span>
+    </div>
+ 
+    <div id="second-block">
+      <div class="field">
+        <label for="rayon-input">Rayon</label>
+        <input id="rayon-input" type="text" placeholder="Rayon autour de cette ville (km)" />
+      </div>
+      <div class="field">
+        <label for="cp-input">Code postal</label>
+        <input id="cp-input" type="text" placeholder="29000" />
+      </div>
+    </div>
+  </div>
+    <script src="script.js"></script>
+</body>
+</html>

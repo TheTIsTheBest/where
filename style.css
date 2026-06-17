@@ -1,0 +1,138 @@
+#title {
+	text-align: center;
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: system-ui, -apple-system, sans-serif;
+	background-color: rgb(133, 201, 189);
+	color: #1a1a1a;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	padding: 2rem 1rem;
+}
+
+.card {
+	background: #fff;
+	border-radius: 12px;
+	border: 0.5px solid rgba(0, 0, 0, 0.1);
+	padding: 2rem;
+	width: 100%;
+	max-width: 440px;
+}
+
+h1 {
+	font-size: 18px;
+	font-weight: 500;
+	margin: 0 0 1.5rem;
+}
+
+.field {
+	margin-bottom: 1.25rem;
+	position: relative;
+}
+
+label {
+	display: block;
+	font-size: 13px;
+	color: #666;
+	margin-bottom: 6px;
+}
+
+input[type="text"] {
+	width: 100%;
+	padding: 9px 12px;
+	font-size: 15px;
+	border: 0.5px solid rgba(0, 0, 0, 0.2);
+	border-radius: 8px;
+	outline: none;
+	background: #fff;
+	color: #1a1a1a;
+	transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+input[type="text"]:focus {
+	border-color: rgba(0, 0, 0, 0.4);
+	box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06);
+}
+
+input.valid {
+	border-color: #3B6D11;
+	box-shadow: 0 0 0 3px rgba(59, 109, 17, 0.1);
+}
+
+#suggestions {
+	display: none;
+	position: absolute;
+	top: calc(100% + 4px);
+	left: 0;
+	right: 0;
+	background: #fff;
+	border: 0.5px solid rgba(0, 0, 0, 0.15);
+	border-radius: 8px;
+	list-style: none;
+	margin: 0;
+	padding: 4px 0;
+	z-index: 100;
+	max-height: 240px;
+	overflow-y: auto;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+#suggestions li {
+	padding: 9px 14px;
+	cursor: pointer;
+	font-size: 14px;
+	color: #1a1a1a;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 8px;
+}
+
+#suggestions li:hover,
+#suggestions li.active {
+	background: #f5f5f3;
+}
+
+#suggestions li mark {
+	background: none;
+	font-weight: 600;
+	color: #1a1a1a;
+}
+
+#suggestions li .dept {
+	font-size: 12px;
+	color: #999;
+	white-space: nowrap;
+}
+
+#suggestions li.loading {
+	color: #999;
+	font-style: italic;
+	cursor: default;
+}
+
+.badge-valid {
+	font-size: 12px;
+	color: #3B6D11;
+	margin-top: 5px;
+	display: none;
+}
+
+.error-msg {
+	font-size: 12px;
+	color: #A32D2D;
+	margin-top: 5px;
+	display: none;
+}
+
+#second-block {
+	display: none;
+}
